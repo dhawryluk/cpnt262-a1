@@ -52,12 +52,12 @@ document.getElementById("hamburger").onclick = function toggleMenu() {
 };
 
 // const navToggle = document.getElementsByClassName("toggle");
-// const popup = document.querySelector("#popup");
+// const popup = document.querySelector("#hamburger");
 
-// function hamToggle() {
+// function toggleMenu() {
 //   navToggle.addEventListener("click", (e) => {
-//     popup.classList.toggle("hidden");
+//     hamburger.classList.toggle("hidden");
 //   });
 // }
 
-// hamToggle();
+// toggleMenu();
