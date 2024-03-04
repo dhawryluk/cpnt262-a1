@@ -10,3 +10,4 @@
 - mdn
 - Bro Code YouTube
 - Tom is Loading YouTube
+- Pexels for the images
