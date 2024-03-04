@@ -1,12 +1,15 @@
+"strict";
+
 const images = [
-  "./images/pic1.jpg",
-  "./images/pic2.jpg",
-  "./images/pic3.jpg",
-  "./images/pic4.jpg",
-  "./images/pic5.jpg",
-  "./images/pic6.jpg",
-  "./images/pic7.jpg",
+  { src: "./images/pic1.jpg", alt: "coffee beans" },
+  { src: "./images/pic2.jpg", alt: "coffee beans" },
+  { src: "./images/pic3.jpg", alt: "coffee beans" },
+  { src: "./images/pic4.jpg", alt: "coffee beans" },
+  { src: "./images/pic5.jpg", alt: "coffee beans" },
+  { src: "./images/pic6.jpg", alt: "coffee beans" },
+  { src: "./images/pic7.jpg", alt: "coffee beans" },
 ];
+
 // console.log(images);
 
 let currentIndex = 0;
@@ -17,7 +20,7 @@ function displayCurrentImage() {
   // console.log(currentImage);
   const imageContainer = document.getElementById("carousel-container");
   // console.log(imageContainer);
-  imageContainer.innerHTML = `<img src=${currentImage} alt="" />`;
+  imageContainer.innerHTML = `<img src=${currentImage.src} alt=${currentImage.alt}  class="w-full max-w-full md:h-svh"/>`;
 }
 
 function nextImage() {
@@ -51,13 +54,15 @@ document.getElementById("hamburger").onclick = function toggleMenu() {
   }
 };
 
-// const navToggle = document.getElementsByClassName("toggle");
-// const popup = document.querySelector("#hamburger");
+const darkToggle = document.getElementById("darkToggle");
+darkToggle.addEventListener("change", themeChange);
 
-// function toggleMenu() {
-//   navToggle.addEventListener("click", (e) => {
-//     hamburger.classList.toggle("hidden");
-//   });
-// }
-
-// toggleMenu();
+function themeChange() {
+  if (darkToggle.checked == true) {
+    document.getElementById("body").classList.add("dark");
+    document.getElementById("body").classList.remove("light");
+  } else {
+    document.getElementById("body").classList.add("light");
+    document.getElementById("body").classList.remove("dark");
+  }
+}

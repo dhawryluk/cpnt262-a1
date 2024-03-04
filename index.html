@@ -3,17 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="tailwind.config.js"></script>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="./tailwind.config.js"></script>
+    <script type="module" src="./script.js"></script>
     <link rel="stylesheet" href="./src/output.css" />
+    <script
+      src="https://kit.fontawesome.com/03e451b521.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Vanilla JavaScript</title>
   </head>
-  <body>
-    <header>
+  <body id="body" class="dark bg-background font-bodyFont">
+    <header class="">
       <nav
-        class="flex flex-wrap items-center justify-between p-3 bg-gray-800 w-full"
+        class="flex flex-wrap items-center justify-between p-3 bg-background w-full"
       >
-        <a href="#" class="text-white text-3xl">LOGO</a>
+        <a href="#" class="text-fontColor text-3xl font-titleFont"
+          ><i class="fa-solid fa-chair text-3xl text-fontColor p-3"></i>Lux
+          Interiors</a
+        >
         <div class="flex md:hidden">
           <button id="hamburger">
             <svg
@@ -22,7 +35,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="toggle block w-8 h-8 stroke-white"
+              class="toggle block w-8 h-8 stroke-fontColor"
             >
               <path
                 stroke-linecap="round"
@@ -36,7 +49,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="toggle hidden w-8 h-8 stroke-white"
+              class="toggle hidden w-8 h-8 stroke-fontColor"
             >
               <path
                 stroke-linecap="round"
@@ -47,41 +60,248 @@
           </button>
         </div>
         <div
-          class="toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 md:border-none"
+          class="toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 md:border-none space-x-4"
         >
           <a
-            href="#"
-            class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 md:border-none"
+            h
+            ref="#"
+            class="block md:inline-block text-fontColor hover:text-ctaButton px-3 py-3 md:border-none"
             >Home
           </a>
           <a
             href="#"
-            class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 md:border-none"
+            class="block md:inline-block text-fontColor hover:text-ctaButton px-3 py-3 md:border-none"
             >Products
           </a>
           <a
             href="#"
-            class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 md:border-none"
+            class="block md:inline-block text-fontColor hover:text-ctaButton px-3 py-3 md:border-none"
             >Pricing
           </a>
           <a
             href="#"
-            class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 md:border-none"
+            class="block md:inline-block text-fontColor hover:text-ctaButton px-3 py-3 md:border-none"
+            >Contact
+          </a>
+          <label class="inline-flex items-center px-3 py-3 cursor-pointer">
+            <input
+              id="darkToggle"
+              type="checkbox"
+              value=""
+              class="sr-only peer"
+              checked
+            />
+            <div
+              class="relative w-11 h-6 rounded-full peer bg-ctaButton peer-focus:ring-4 peer-focus:ring-ctaButton peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-ctaButton"
+            ></div>
+            <span class="ms-3 text-sm text-fontColor">Dark/Light</span>
+          </label>
+        </div>
+      </nav>
+      <div class="">
+        <div id="carousel-container" class=""></div>
+        <div class="flex justify-between">
+          <button
+            id="previous-image"
+            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-slate-800/75 text-fontColor p-4"
+          >
+            &#10094;
+          </button>
+          <button
+            id="next-image"
+            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-slate-800/75 text-fontColor p-4"
+          >
+            &#10095;
+          </button>
+        </div>
+      </div>
+      <div
+        class="text-fontColor w-4/5 m-auto text-justify p-10 leading-relaxed tracking-wider"
+      >
+        <h1 class="text-3xl text-center p-4">
+          Welcome to Lux Interiors: Embracing Nature's Elegance
+        </h1>
+        <p>
+          In the heart of Canada lies a sanctuary of timeless sophistication and
+          sustainable craftsmanship. Welcome to Lux Interiors, where the essence
+          of mid-century charm intertwines with the purity of natural elements.
+          Our collection beckons with an invitation to experience the allure of
+          handcrafted furniture, meticulously designed to elevate your living
+          space with unparalleled grace and comfort.
+        </p>
+        <br />
+        <p>
+          Specializing in the rich tones and textures of teak and walnut wood,
+          each piece at Lux Interiors is a testament to artisanal excellence and
+          ecological mindfulness. From intimate dining settings to inviting
+          lounge areas, our creations exude warmth and style, embodying the
+          harmonious fusion of form and function.
+        </p>
+        <br />
+        <p>
+          At Lux Interiors, we believe in the inherent beauty of nature's
+          bounty. That's why we exclusively source our materials from
+          sustainable origins, ensuring every creation resonates with ecological
+          integrity and ethical values. As you explore our curated selection,
+          immerse yourself in the narrative of craftsmanship and sustainability,
+          where luxury meets authenticity in every detail.
+        </p>
+        <br />
+        <p>
+          Discover Lux Interiors – where the whispers of nature intertwine with
+          the echoes of timeless elegance, inviting you to embrace the essence
+          of holistic living in every moment.
+        </p>
+      </div>
+      <div
+        id="#card-container"
+        class="bg-accent2 p-4 flex flex-wrap justify-center gap-4"
+      >
+        <div class="w-[350px] rounded-lg shadow bg-accent1 border-accent2">
+          <a href="#">
+            <img class="rounded-t-lg" src="./images/pic1.jpg" alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-fontColor">
+                Our Curated Selection
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-fontColor">
+              Dive into our handpicked collection of meticulously crafted
+              furniture pieces, each telling a story of timeless elegance and
+              sustainable craftsmanship. Click below to discover more.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-fontColor bg-ctaButton rounded-lg hover:bg-ctaButton/75"
+            >
+              Read more
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="w-[350px] rounded-lg shadow bg-accent1 border-accent2">
+          <a href="#">
+            <img class="rounded-t-lg" src="./images/pic1.jpg" alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-fontColor">
+                Material Sourcing
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-fontColor">
+              Uncover the journey behind our commitment to sustainable practices
+              and ethical material sourcing, where each selection reflects our
+              dedication to environmental stewardship and social responsibility.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-fontColor bg-ctaButton rounded-lg hover:bg-ctaButton/75"
+            >
+              Read more
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="w-[350px] rounded-lg shadow bg-accent1 border-accent2">
+          <a href="#">
+            <img class="rounded-t-lg" src="./images/pic1.jpg" alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-fontColor">
+                Interior Design Consulting
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-fontColor">
+              Experience the transformative power of personalized design
+              solutions tailored to your unique style and space. Click below to
+              explore our interior design consulting services.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-fontColor bg-ctaButton rounded-lg hover:bg-ctaButton/75"
+            >
+              Read more
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <footer>
+      <div class="flex justify-between p-6 md:max-w-2xl md:m-auto">
+        <div class="flex justify-center text-left items-center">
+          <i class="fa-solid fa-chair text-8xl text-fontColor p-3"></i>
+          <h1 class="text-fontColor text-5xl text-left font-titleFont">
+            Lux Interiors
+          </h1>
+        </div>
+        <div class="flex-col items-end bg-background text-bold mt-5">
+          <a
+            h
+            ref="#"
+            class="flex text-fontColor hover:text-ctaButton px-2 py-2"
+            >Home
+          </a>
+          <a href="#" class="flex text-fontColor hover:text-ctaButton px-2 py-2"
+            >Products
+          </a>
+          <a href="#" class="flex text-fontColor hover:text-ctaButton px-2 py-2"
+            >Pricing
+          </a>
+          <a href="#" class="flex text-fontColor hover:text-ctaButton px-2 py-2"
             >Contact
           </a>
         </div>
-      </nav>
-
-      <div id="carousel-container" class="w-full h-full"></div>
-      <button
-        id="previous-image"
-        class="bg-slate-600 text-white p-4 text-center content-center"
-      >
-        Previous
-      </button>
-      <button id="next-image" class="bg-slate-600 text-white p-4 text-center">
-        Next
-      </button>
-    </header>
+      </div>
+      <h2 class="text-fontColor text-center p-2">
+        &copy; Copyright Lux Interiors 2024
+      </h2>
+    </footer>
   </body>
 </html>
