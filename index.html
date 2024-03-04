@@ -19,7 +19,7 @@
     <title>Vanilla JavaScript</title>
   </head>
   <body id="body" class="dark bg-background font-bodyFont">
-    <header class="">
+    <header id="header" class="">
       <nav
         class="flex flex-wrap items-center justify-between p-3 bg-background w-full"
       >
@@ -64,22 +64,22 @@
         >
           <a
             h
-            ref="#"
+            ref="#header"
             class="block md:inline-block text-fontColor hover:text-ctaButton px-3 py-3 md:border-none"
             >Home
           </a>
           <a
-            href="#"
+            href="#text-content"
             class="block md:inline-block text-fontColor hover:text-ctaButton px-3 py-3 md:border-none"
             >Products
           </a>
           <a
-            href="#"
+            href="#card-container"
             class="block md:inline-block text-fontColor hover:text-ctaButton px-3 py-3 md:border-none"
             >Pricing
           </a>
           <a
-            href="#"
+            href="#footer"
             class="block md:inline-block text-fontColor hover:text-ctaButton px-3 py-3 md:border-none"
             >Contact
           </a>
@@ -118,7 +118,7 @@
       <div
         class="text-fontColor w-4/5 m-auto text-justify p-10 leading-relaxed tracking-wider"
       >
-        <h1 class="text-3xl text-center p-4">
+        <h1 id="text-content" class="text-3xl text-center p-4">
           Welcome to Lux Interiors: Embracing Nature's Elegance
         </h1>
         <p>
@@ -159,7 +159,11 @@
       >
         <div class="w-[350px] rounded-lg shadow bg-accent1 border-accent2">
           <a href="#">
-            <img class="rounded-t-lg" src="./images/pic1.jpg" alt="" />
+            <img
+              class="rounded-t-lg"
+              src="./assets/images/curated-selection.jpg"
+              alt=""
+            />
           </a>
           <div class="p-5">
             <a href="#">
@@ -197,7 +201,11 @@
         </div>
         <div class="w-[350px] rounded-lg shadow bg-accent1 border-accent2">
           <a href="#">
-            <img class="rounded-t-lg" src="./images/pic1.jpg" alt="" />
+            <img
+              class="rounded-t-lg"
+              src="./assets/images/material-sourcing.jpg"
+              alt=""
+            />
           </a>
           <div class="p-5">
             <a href="#">
@@ -235,7 +243,11 @@
         </div>
         <div class="w-[350px] rounded-lg shadow bg-accent1 border-accent2">
           <a href="#">
-            <img class="rounded-t-lg" src="./images/pic1.jpg" alt="" />
+            <img
+              class="rounded-t-lg"
+              src="./assets/images/interior-design.jpg"
+              alt=""
+            />
           </a>
           <div class="p-5">
             <a href="#">
@@ -273,7 +285,7 @@
         </div>
       </div>
     </header>
-    <footer>
+    <footer id="footer">
       <div class="flex justify-between p-6 md:max-w-2xl md:m-auto">
         <div class="flex justify-center text-left items-center">
           <i class="fa-solid fa-chair text-8xl text-fontColor p-3"></i>
@@ -284,17 +296,23 @@
         <div class="flex-col items-end bg-background text-bold mt-5">
           <a
             h
-            ref="#"
+            ref="#header"
             class="flex text-fontColor hover:text-ctaButton px-2 py-2"
             >Home
           </a>
-          <a href="#" class="flex text-fontColor hover:text-ctaButton px-2 py-2"
+          <a
+            href="#text-content"
+            class="flex text-fontColor hover:text-ctaButton px-2 py-2"
             >Products
           </a>
-          <a href="#" class="flex text-fontColor hover:text-ctaButton px-2 py-2"
+          <a
+            href="#card-container"
+            class="flex text-fontColor hover:text-ctaButton px-2 py-2"
             >Pricing
           </a>
-          <a href="#" class="flex text-fontColor hover:text-ctaButton px-2 py-2"
+          <a
+            href="#footer"
+            class="flex text-fontColor hover:text-ctaButton px-2 py-2"
             >Contact
           </a>
         </div>
